@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&display=swap");
+
+:root {
+  --bg-color: #1e1e1e;
+  --font-color: #e1e1e1;
+
+  --matched-bg-color: #fdf8c5;
+  --matched-font-color: #282c34;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .valid-keys {
+  font-size: 10rem;
+  font-weight: bold;
+  min-width: 600px;
+  border-bottom: solid 2px #ffffff;
+}
+
+.container .valid-keys .matched {
+  background-color: var(--matched-bg-color);
+  color: var(--matched-font-color);
+}
+
+.container .valid-keys .remainder {
+  opacity: 0.5;
+}
+
+.container .typed-keys {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  width: 600px;
+  overflow: hidden;
+}
+
+.container .completed-words {
+  width: max-content;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: left;
+  padding: 20px 30px;
+  line-height: 1.5rem;
+  opacity: 0.5;
 }
