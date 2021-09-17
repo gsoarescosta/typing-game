@@ -84,6 +84,17 @@ const App = () => {
           ))}
         </ol>
       </div>
+      <div className="credits">
+        <a
+          href="https://github.com/gsoarescosta"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span role="img" aria-label="Wolf Emoji">
+            🐺 @ 2021
+          </span>
+        </a>
+      </div>
     </div>
   );
 };

@@ -70,3 +70,19 @@ body {
   line-height: 1.5rem;
   opacity: 0.5;
 }
+
+.credits {
+  position: absolute;
+  top: 90vh;
+}
+
+.credits a {
+  text-decoration: none;
+  color: var(--font-color);
+  transition: 0.25s;
+}
+
+.credits a:hover,
+.credits a:active {
+  color: var(--matched-bg-color);
+}
